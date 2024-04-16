@@ -7,7 +7,7 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? " text-[#41B06E]  font-bold" : ""
+            isActive ? " border border-[#41B06E] font-bold " : ""
           }
         >
           Home
@@ -17,7 +17,7 @@ const Navbar = () => {
         <NavLink
           to="/aboutus"
           className={({ isActive }) =>
-            isActive ? " text-[#41B06E]  font-bold" : ""
+            isActive ? " border border-[#41B06E] font-bold" : ""
           }
         >
           About Us
@@ -27,7 +27,7 @@ const Navbar = () => {
         <NavLink
           to="/updateprofile"
           className={({ isActive }) =>
-            isActive ? " text-[#41B06E]  font-bold" : ""
+            isActive ? "border border-[#41B06E]  font-bold" : ""
           }
         >
           Update Profile
@@ -37,7 +37,7 @@ const Navbar = () => {
         <NavLink
           to="/contactus"
           className={({ isActive }) =>
-            isActive ? " text-[#41B06E]  font-bold" : ""
+            isActive ? "border bg-none border-[#41B06E] font-bold" : ""
           }
         >
           Contact Us
@@ -67,18 +67,22 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-1 lg:space-x-3 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1]  shadow text-lg rounded-box w-52"
           >
             {navLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Nova Ventures</a>
+        <a className="btn text-3xl btn-ghost ">
+          <span className="text-[#41B06E] font-bold ">Nova</span> Ventures
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <button className="bg-[#41B06E] px-5 py-3 cursor-pointer rounded-lg text-white font-bold">
+          LogIn
+        </button>
       </div>
     </div>
   );

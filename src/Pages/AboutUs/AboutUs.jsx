@@ -20,12 +20,12 @@ const AboutUs = () => {
           <div className="text-gray-100">
             <p>
               Welcome to Radiant Journeys, where unforgettable vacation
-              experiences await you. At Radiant Journeys, we're dedicated to
+              experiences await you. At Radiant Journeys, were dedicated to
               making every moment of your travels memorable, filled with
               excitement, relaxation, and cherished memories. As your premier
               vacation concierge, we specialize in curating exceptional travel
               experiences tailored to your unique desires. From romantic
-              getaways to family adventures and solo explorations, we're
+              getaways to family adventures and solo explorations, were
               committed to crafting the perfect vacation package just for you.
               What sets us apart is our unwavering dedication to personalized
               service and meticulous attention to detail. Our team of seasoned
@@ -34,11 +34,11 @@ const AboutUs = () => {
               exceeds expectations. We handpick accommodations that reflect your
               style and aspirations, from luxurious beachfront retreats to
               charming boutique hideaways in idyllic destinations. But our
-              service doesn't end there. We're with you every step of the way,
+              service does not end there. Were with you every step of the way,
               providing expert guidance, insider tips, and round-the-clock
               support to ensure a seamless and stress-free travel experience.
               Whether you need help planning excursions, arranging
-              transportation, or securing dining reservations, we're here to
+              transportation, or securing dining reservations, we are here to
               make your journey as smooth as possible. At Radiant Journeys, we
               believe that travel is transformative, creating lasting memories
               and enriching lives. Let us be your trusted partner in turning
