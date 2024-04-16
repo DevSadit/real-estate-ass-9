@@ -1,0 +1,81 @@
+[
+  {
+    "id": 1,
+    "rating": 4.8,
+    "title": "Luxury Beachfront Hotel",
+    "segment_name": "Sunset Suites",
+    "description": "Experience unparalleled luxury at our beachfront hotel. Enjoy breathtaking ocean views, gourmet dining, and world-class amenities.",
+    "price": "$300 per night",
+    "status": "rent",
+    "location": "Miami Beach, Florida",
+    "facilities": [
+      "Ocean View Rooms",
+      "Swimming Pool",
+      "Spa Center"
+    ],
+    "image": "https://i.ibb.co/ypYbw49/patrick-robert-doyle-AH8z-KXq-FITA-unsplash.jpg"
+  },
+  {
+    "id": 2,
+    "rating": 4.0,
+    "title": "Cozy Motel in the Countryside",
+    "segment_name": "Harbor Haven Hotels",
+    "description": "Escape to the peaceful countryside and unwind at our charming motel. Perfect for a weekend getaway or a long-term stay.",
+    "price": "$80 per night",
+    "status": "rent",
+    "location": "Catskill Mountains, New York",
+    "facilities": ["Scenic Views", "Free Parking", "Pet-Friendly Rooms"],
+    "image": "https://i.ibb.co/jg9M70P/sara-dubler-Koei-7y-Yt-Io-unsplash.jpg"
+  },
+  {
+    "id": 3,
+    "rating": 3.9,
+    "title": "Tropical Paradise Resort",
+    "segment_name": "Tranquil Terrace Resorts",
+    "description": "Indulge in luxury and relaxation at our tropical paradise resort. Immerse yourself in lush gardens, pristine beaches, and endless activities.",
+    "price": "$500 per night",
+    "status": "sale",
+    "location": "Maui, Hawaii",
+    "facilities": ["Beachfront Villas", "Infinity Pool", "Gourmet Dining"],
+    "image": "https://i.ibb.co/fdg26p0/paolo-nicolello-2g-Ox-Kj594n-M-unsplash.jpg"
+  },
+  {
+    "id": 4,
+    "rating": 4.8,
+    "title": "Seaside Vacation Rental Cottage",
+    "segment_name": "Azure Apartments",
+    "description": "Escape to a cozy seaside cottage and enjoy panoramic ocean views. Perfect for a romantic retreat or a family vacation.",
+    "price": "$200 per night",
+    "status": "rent",
+    "location": "Cape Cod, Massachusetts",
+    "facilities": ["Private Beach Access", "Fireplace", "Outdoor Dining Area"],
+    "image": "https://i.ibb.co/rG516X9/allphoto-bangkok-n-I4a-C1ka-TRc-unsplash.jpg"
+  },
+  {
+    "id": 5,
+    "rating": 4.1,
+    "title": "Rustic Mountain Lodge",
+    "segment_name": "Golden Sands Guesthouses",
+    "description": "Experience the beauty of the great outdoors at our rustic mountain lodge. Nestled in the heart of nature, it's the perfect retreat for outdoor enthusiasts.",
+    "price": "$150 per night",
+    "status": "sale",
+    "location": "Rocky Mountains, Colorado",
+    "facilities": ["Hiking Trails", "Campfire Area", "Cozy Cabins"],
+    "image": "https://i.ibb.co/1dX9WD7/sasha-kaunas-G6e-XUCi8-Jg-A-unsplash.jpg"
+  },
+  {
+    "id": 6,
+    "rating": 4.5,
+    "title": "Quaint Guesthouse in the Historic District",
+    "segment_name": "Whispering Pines Lodges",
+    "description": "Step back in time and experience old-world charm at our quaint guesthouse. Located in the historic district, it's the perfect blend of comfort and nostalgia.",
+    "price": "$120 per night",
+    "status": "rent",
+    "location": "Charleston, South Carolina",
+    "facilities": [
+      "Antique Furnishings",
+      "Garden Courtyard"
+    ],
+    "image": "https://i.ibb.co/Gvt0Qz9/fabio-fistarol-qai-Clhyq0s-unsplash.jpg"
+  }
+]

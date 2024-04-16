@@ -1,8 +1,11 @@
+import Head from "../../Layout/Head";
+
 const UpdateProfile = () => {
     return (
-        <div>
-           <h1 className="text-4xl">Update Profile</h1>
-        </div>
+      <div>
+        <Head title="Update Profile" />
+        <h1 className="text-4xl">Update Profile</h1>
+      </div>
     );
 };
 
