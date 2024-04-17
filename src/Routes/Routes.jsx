@@ -5,6 +5,8 @@ import AboutUs from "../Pages/AboutUs/AboutUs";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import ErrorElement from "../ErrorElement/ErrorElement";
 import ContactUs from "../Pages/ContactUs/ContactUs";
+import Login from "../Pages/Login/Login";
+import Resgister from "../Pages/Register/Resgister";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
       {
         path: "/contactus",
         element: <ContactUs></ContactUs>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Resgister></Resgister>,
       },
     ],
   },

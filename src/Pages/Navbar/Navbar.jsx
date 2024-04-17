@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const navLinks = (
@@ -80,9 +80,9 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <button className="bg-[#41B06E] px-5 py-3 cursor-pointer rounded-lg text-white font-bold">
-          LogIn
-        </button>
+        <Link to="/login">
+          <button className="bg-[#41B06E] px-5 py-3 cursor-pointer rounded-lg text-white font-bold">Login</button>
+        </Link>
       </div>
     </div>
   );
