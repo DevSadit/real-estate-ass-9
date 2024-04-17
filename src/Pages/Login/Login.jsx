@@ -1,9 +1,38 @@
 import { Link } from "react-router-dom";
 import Head from "../../Layout/Head";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { FaFacebook, FaGoogle } from "react-icons/fa";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from "../../Firebase/Firebase.config";
 
 const Login = () => {
+  const auth = getAuth(app);
+  const { loginUser } = useContext(AuthContext);
+  // email login
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    console.log(email, password);
+    loginUser(email, password)
+      .then((result) => result)
+      .catch((error) => console.log(error));
+  };
+
+  const handleGoogle = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   return (
-    <div className="hero min-h-screen" >
+    <div className="hero min-h-screen">
       <Head title="Login" />
       <div className="hero-content flex-col lg:flex-row w-full">
         <div className="text-center lg:text-left">
@@ -16,13 +45,14 @@ const Login = () => {
           </p>
         </div>
         <div className="card shrink-0 w-full max-w-sm border">
-          <form className="card-body">
+          <form onSubmit={handleLogin} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
               <input
                 type="email"
+                name="email"
                 placeholder="Your email"
                 className="input input-bordered"
                 required
@@ -34,6 +64,7 @@ const Login = () => {
               </label>
               <input
                 type="password"
+                name="password"
                 placeholder="Your password"
                 className="input input-bordered"
                 required
@@ -58,6 +89,15 @@ const Login = () => {
               <button className="btn bg-[#41B06E] text-white text-xl">
                 Login
               </button>
+              <p className="my-4 text-center">Login with social accounts</p>
+              <div className="flex mx-auto gap-x-7 ">
+                <button onClick={handleGoogle}>
+                  <FaGoogle className="text-3xl" />
+                </button>
+                <button>
+                  <FaFacebook className="text-3xl" />
+                </button>
+              </div>
             </div>
           </form>
         </div>

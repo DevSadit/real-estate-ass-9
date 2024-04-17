@@ -1,15 +1,24 @@
 import { Link } from "react-router-dom";
 import Head from "../../Layout/Head";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Resgister = () => {
-    const handleRegister=e=>{
-        e.preventDefault();
-        
-    }
-    return (
-        <div>
+  const { creatUser } = useContext(AuthContext);
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+            
+    // 
 
-        <Head title="Register" />;
+    creatUser(email, password)
+      .then((result) => result)
+      .catch((error) => console.log(error));
+  };
+  return (
+    <div>
+      <Head title="Register" />;
       <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row w-full">
           <div className="text-center lg:text-left">
@@ -30,7 +39,6 @@ const Resgister = () => {
                   type="name"
                   placeholder="Your Name"
                   className="input input-bordered"
-                  
                 />
               </div>
               <div className="form-control">
@@ -41,7 +49,6 @@ const Resgister = () => {
                   type="url"
                   placeholder="Image url"
                   className="input input-bordered"
-                  
                 />
               </div>
               <div className="form-control">
@@ -50,9 +57,9 @@ const Resgister = () => {
                 </label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="Your email"
                   className="input input-bordered"
-                  
                 />
               </div>
               <div className="form-control">
@@ -61,9 +68,9 @@ const Resgister = () => {
                 </label>
                 <input
                   type="password"
+                  name="password"
                   placeholder="Your password"
                   className="input input-bordered"
-                  
                 />
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
