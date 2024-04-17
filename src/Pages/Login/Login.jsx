@@ -3,12 +3,18 @@ import Head from "../../Layout/Head";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FaFacebook, FaGoogle } from "react-icons/fa";
-import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import {
+  FacebookAuthProvider,
+  GoogleAuthProvider,
+  getAuth,
+  signInWithPopup,
+} from "firebase/auth";
 import app from "../../Firebase/Firebase.config";
 
 const Login = () => {
   const auth = getAuth(app);
   const { loginUser } = useContext(AuthContext);
+
   // email login
   const handleLogin = (e) => {
     e.preventDefault();
@@ -17,18 +23,31 @@ const Login = () => {
 
     console.log(email, password);
     loginUser(email, password)
-      .then((result) => result)
-      .catch((error) => console.log(error));
+      .then((result) => result.user)
+      .catch((error) => console.log(error.message));
   };
 
+  // Google login
   const handleGoogle = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
-        console.log(result);
+        console.log(result.user);
       })
       .catch((error) => {
-        console.error(error);
+        console.error(error.message);
+      });
+  };
+
+  // facebook login
+  const handleFacebook = () => {
+    const provider = new FacebookAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error.message);
       });
   };
   return (
@@ -94,7 +113,7 @@ const Login = () => {
                 <button onClick={handleGoogle}>
                   <FaGoogle className="text-3xl" />
                 </button>
-                <button>
+                <button onClick={handleFacebook}>
                   <FaFacebook className="text-3xl" />
                 </button>
               </div>

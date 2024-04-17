@@ -10,9 +10,6 @@ const Resgister = () => {
   const handleRegister = (e) => {
     e.preventDefault();
 
-        email.value = "";
-        password.value = "";
-
 
     const passwordPattern = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
     const password = e.target.password.value;
@@ -28,7 +25,11 @@ const Resgister = () => {
       creatUser(email, password)
         .then((result) => result)
         .catch((error) => console.log(error));
+
+
+
     }
+
 
 
     //
