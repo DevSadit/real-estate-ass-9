@@ -7,7 +7,7 @@ const Login = () => {
       <Head title="Login" />
       <div className="hero-content flex-col lg:flex-row w-full">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Connect Corner</h1>
+          <h1 className="text-5xl font-bold">Login Now!</h1>
           <p className="py-6">
             Welcome to Connect Corner, your exclusive gateway to seamless access
             and personalized experiences within our community. Log in here to

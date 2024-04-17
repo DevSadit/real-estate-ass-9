@@ -8,8 +8,10 @@ const Home = () => {
   return (
     <div>
       <Head title="Home" />
-      <Slider></Slider>
-      <Destinations datas={datas} key={datas.id}></Destinations>
+      <div>
+        <Slider></Slider>
+        <Destinations datas={datas} key={datas.id}></Destinations>
+      </div>
     </div>
   );
 };

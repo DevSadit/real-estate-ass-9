@@ -12,7 +12,7 @@ const Head = ({title}) => {
 };
 
 
-Head.propTypes ={
-    title: PropTypes.object,
-}
+Head.propTypes = {
+  title: PropTypes.string,
+};
 export default Head;
