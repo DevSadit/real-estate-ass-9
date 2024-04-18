@@ -4,14 +4,14 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-console.log("khela hbe", import.meta.env.VITE_pass);
+console.log(import.meta.env.VITE_APIKEY);
 const firebaseConfig = {
-  apiKey: "AIzaSyDCDfm_S43CksCbfX0_eNj5bwrA7BPXuSg",
-  authDomain: "hotel-project-613bc.firebaseapp.com",
-  projectId: "hotel-project-613bc",
-  storageBucket: "hotel-project-613bc.appspot.com",
-  messagingSenderId: "900617741966",
-  appId: "1:900617741966:web:e2cf90a6bc317d1bd60bdf",
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

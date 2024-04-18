@@ -5,17 +5,20 @@ import PropTypes from "prop-types";
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const AuthProvider = ({children}) => {
-
+    const [loading, setLoading] = useState(true);
     const [user, setUser]= useState(null)
 
     const creatUser = (email, password)=>{
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
     const loginUser = (email, password)=>{
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
     const logOut =()=>{
+        setLoading(true);
         return signOut(auth);
     }
 
@@ -23,13 +26,14 @@ const AuthProvider = ({children}) => {
         const unSubscribe = onAuthStateChanged(auth, usr=>{
             console.log(`value of usr :: `, usr);
             setUser(usr);
+            setLoading(false);
         });
         return ()=>{
             unSubscribe();
         }
     },[])
 
-    const authInfo = { user, creatUser, logOut, loginUser , };
+    const authInfo = { user, creatUser, logOut, loginUser, loading ,};
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

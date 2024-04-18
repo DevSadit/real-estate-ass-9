@@ -62,6 +62,7 @@ const Resgister = () => {
                   name="name"
                   placeholder="Your Name"
                   className="input input-bordered"
+                  required
                 />
               </div>
               <div className="form-control">
@@ -84,6 +85,7 @@ const Resgister = () => {
                   name="email"
                   placeholder="Your email"
                   className="input input-bordered"
+                  required
                 />
               </div>
               <div className="form-control">
@@ -95,6 +97,7 @@ const Resgister = () => {
                   name="password"
                   placeholder="Your password"
                   className="input input-bordered"
+                  required
                 />
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">

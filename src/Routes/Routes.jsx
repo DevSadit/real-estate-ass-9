@@ -8,6 +8,7 @@ import ContactUs from "../Pages/ContactUs/ContactUs";
 import Login from "../Pages/Login/Login";
 import Resgister from "../Pages/Register/Resgister";
 import CardDetails from "../Pages/Destination/CardDetails";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/contactus",
-        element: <ContactUs></ContactUs>,
+        element: (
+          <PrivateRoutes>
+            <ContactUs></ContactUs>
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/login",

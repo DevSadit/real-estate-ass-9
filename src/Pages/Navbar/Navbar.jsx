@@ -25,16 +25,6 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/profile"
-          className={({ isActive }) =>
-            isActive ? " border border-[#41B06E] font-bold " : ""
-          }
-        >
-          Profile
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
           to="/aboutus"
           className={({ isActive }) =>
             isActive ? " border border-[#41B06E] font-bold" : ""
