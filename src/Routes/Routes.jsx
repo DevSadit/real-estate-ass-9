@@ -47,7 +47,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/carddetails/:id",
-        element: <CardDetails></CardDetails>,
+        element: (
+          <PrivateRoutes>
+            <CardDetails></CardDetails>
+          </PrivateRoutes>
+        ),
         loader: () => fetch(`/estates.json`),
         errorElement: <ErrorElement></ErrorElement>,
       },

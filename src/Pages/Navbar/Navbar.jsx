@@ -94,7 +94,7 @@ const Navbar = () => {
           <div>
             <img
               id="clickable"
-              className="w-10 rounded-full"
+              className="md:w-10 w-8 rounded-full"
               src={user.photoURL}
             />
 
@@ -107,13 +107,13 @@ const Navbar = () => {
         {user ? (
           <button
             onClick={handleLogOut}
-            className="bg-[#41B06E] px-5 py-3 cursor-pointer rounded-lg text-white font-bold"
+            className="bg-[#41B06E] px-1 md:px-5 py-3 cursor-pointer rounded-lg text-white font-bold"
           >
             LogOut
           </button>
         ) : (
           <Link to="/login">
-            <button className="bg-[#41B06E] px-5 py-3 cursor-pointer rounded-lg text-white font-bold">
+            <button className="bg-[#41B06E] px-5 py-3 text-white cursor-pointer rounded-lg font-bold">
               Login
             </button>
           </Link>

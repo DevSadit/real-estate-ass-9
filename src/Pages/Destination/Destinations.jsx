@@ -6,7 +6,7 @@ const Destinations = ({ datas }) => {
       <div className="text-center">
         <h1 className="text-5xl mt-12">
           Explore Your <span className="font-bold text-[#41B06E]">Dream </span>
-          Destination: {datas.length}
+          Destination
         </h1>
         <p className="mt-10 text-xl">
           Embark on an unforgettable journey and explore your dream destination

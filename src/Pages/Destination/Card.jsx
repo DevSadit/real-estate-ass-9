@@ -10,19 +10,17 @@ const Card = ({ data }) => {
     segment_name,
     description,
     price,
-    status,
-    location,
     facilities,
     image,
   } = data;
   return (
-    <div className="card bg-base-100 border border-[#13131326] p-4 ">
+    <div className="card bg-base-100 border border-[#13131326] p-4 mx-3 md:mx-0">
       <div className="">
         <img src={image} className="rounded-xl mx-auto" />
       </div>
 
       <div className="md:space-y-4 mt-3">
-        <div className="flex gap-x-3 justify-center">
+        <div className="flex gap-x-3 md:h-16 justify-center">
           {facilities.map((facility, i) => (
             <h4
               key={i}
@@ -32,9 +30,9 @@ const Card = ({ data }) => {
             </h4>
           ))}
         </div>
-        <h1 className="text-2xl font-bold">{title}</h1>
+        <h1 className="text-2xl font-bold md:h-14 h-16">{title}</h1>
         <hr className="border-dashed h-[1px] bg-[#13131326]" />
-        <p className=" h-20">{description}</p>
+        <p className=" md:h-24">{description}</p>
         <h2 className="card-title text-xl font-bold">{segment_name}</h2>
         <hr className="border-dashed h-[1px] bg-[#13131326] my-3" />
         <div className="flex gap-x-3 justify-between">
@@ -48,7 +46,7 @@ const Card = ({ data }) => {
         </div>
         <div>
           <Link to={`/carddetails/${id}`}>
-            <button className="text-white hover:bg-[#286d44] w-full font-bold text-xl text-center rounded-lg bg-[#41B06E] py-3">
+            <button className="text-white hover:bg-[#286d44] w-full font-bold text-xl text-center rounded-lg bg-[#41B06E] py-3 md:mt-0 mt-2">
               See Details
             </button>
           </Link>
