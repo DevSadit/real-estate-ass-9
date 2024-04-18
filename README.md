@@ -12,6 +12,8 @@
 
 -  ## NPM Packages which i used in this Project -
 - react icon
+- Animate.css
+- React-leaflet
 - react tooltip
+- React Hook form,
 - daisyUI
-- 
