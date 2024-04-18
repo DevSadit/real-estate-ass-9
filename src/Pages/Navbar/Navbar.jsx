@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from "react-tooltip";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   console.log(user);
@@ -100,23 +101,19 @@ const Navbar = () => {
       </div>
       <div className="navbar-end space-x-3">
         {user && (
-          <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn m-1">
-              <img className="w-10 rounded-full" src={user.photoURL} />
-            </div>
-            <ul
-              tabIndex={0}
-              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Item 2</a>
-              </li>
-            </ul>
+          <div>
+            <img
+              id="clickable"
+              className="w-10 rounded-full"
+              src={user.photoURL}
+            />
+
+            <Tooltip anchorSelect="#clickable" clickable>
+              <button>{user.displayName}</button>
+            </Tooltip>
           </div>
         )}
+
         {user ? (
           <button
             onClick={handleLogOut}
@@ -137,3 +134,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+{
+  /* <img className="w-10 rounded-full" src={user.photoURL} />; */
+}
