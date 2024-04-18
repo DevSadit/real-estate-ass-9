@@ -13,11 +13,12 @@
       "Swimming Pool",
       "Spa Center"
     ],
-    "image": "https://i.ibb.co/ypYbw49/patrick-robert-doyle-AH8z-KXq-FITA-unsplash.jpg"
+    "image": "https://i.ibb.co/ypYbw49/patrick-robert-doyle-AH8z-KXq-FITA-unsplash.jpg",
+    "area": "2500 sqft"
   },
   {
     "id": 2,
-    "rating": 4.0,
+    "rating": 4.1,
     "title": "Cozy Motel in the Countryside",
     "segment_name": "Harbor Haven Hotels",
     "description": "Escape to the peaceful countryside and unwind at our charming motel. Perfect for a weekend getaway or a long-term stay.",
@@ -25,7 +26,8 @@
     "status": "rent",
     "location": "Catskill Mountains, New York",
     "facilities": ["Scenic Views", "Free Parking", "Pet-Friendly Rooms"],
-    "image": "https://i.ibb.co/jg9M70P/sara-dubler-Koei-7y-Yt-Io-unsplash.jpg"
+    "image": "https://i.ibb.co/jg9M70P/sara-dubler-Koei-7y-Yt-Io-unsplash.jpg",
+    "area": "2100 sqft"
   },
   {
     "id": 3,
@@ -37,7 +39,8 @@
     "status": "sale",
     "location": "Maui, Hawaii",
     "facilities": ["Beachfront Villas", "Infinity Pool", "Gourmet Dining"],
-    "image": "https://i.ibb.co/fdg26p0/paolo-nicolello-2g-Ox-Kj594n-M-unsplash.jpg"
+    "image": "https://i.ibb.co/fdg26p0/paolo-nicolello-2g-Ox-Kj594n-M-unsplash.jpg",
+    "area": "1800 sqft"
   },
   {
     "id": 4,
@@ -49,7 +52,8 @@
     "status": "rent",
     "location": "Cape Cod, Massachusetts",
     "facilities": ["Private Beach Access", "Fireplace", "Outdoor Dining Area"],
-    "image": "https://i.ibb.co/rG516X9/allphoto-bangkok-n-I4a-C1ka-TRc-unsplash.jpg"
+    "image": "https://i.ibb.co/rG516X9/allphoto-bangkok-n-I4a-C1ka-TRc-unsplash.jpg",
+    "area": "2600 sqft"
   },
   {
     "id": 5,
@@ -61,7 +65,8 @@
     "status": "sale",
     "location": "Rocky Mountains, Colorado",
     "facilities": ["Hiking Trails", "Campfire Area", "Cozy Cabins"],
-    "image": "https://i.ibb.co/1dX9WD7/sasha-kaunas-G6e-XUCi8-Jg-A-unsplash.jpg"
+    "image": "https://i.ibb.co/1dX9WD7/sasha-kaunas-G6e-XUCi8-Jg-A-unsplash.jpg",
+    "area": "2900 sqft"
   },
   {
     "id": 6,
@@ -72,10 +77,8 @@
     "price": "$120 per night",
     "status": "rent",
     "location": "Charleston, South Carolina",
-    "facilities": [
-      "Antique Furnishings",
-      "Garden Courtyard"
-    ],
-    "image": "https://i.ibb.co/Gvt0Qz9/fabio-fistarol-qai-Clhyq0s-unsplash.jpg"
+    "facilities": ["Antique Furnishings", "Garden Courtyard"],
+    "image": "https://i.ibb.co/Gvt0Qz9/fabio-fistarol-qai-Clhyq0s-unsplash.jpg",
+    "area": "2100 sqft"
   }
 ]
