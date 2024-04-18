@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import Head from "../../Layout/Head";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { getAuth, updateProfile } from "firebase/auth";
 import app from "../../Firebase/Firebase.config";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Resgister = () => {
+  const [showPass, setShowPass]= useState(false);
   const auth = getAuth(app)
   const { creatUser } = useContext(AuthContext);
   const handleRegister = (e) => {
@@ -92,13 +94,18 @@ const Resgister = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Your password"
-                  className="input input-bordered"
-                  required
-                />
+                <div className="relative">
+                  <input
+                    type={showPass ? "text" : "password"}
+                    name="password"
+                    placeholder="Your password"
+                    className="input input-bordered w-full"
+                    required
+                  />
+                  <span className="absolute top-4 right-4" onClick={() => setShowPass(!showPass)}>
+                    {showPass ? <FaEye /> : <FaEyeSlash />}
+                  </span>
+                </div>
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?
