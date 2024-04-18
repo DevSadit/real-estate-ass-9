@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Head from "../../Layout/Head";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FaFacebook, FaGoogle } from "react-icons/fa";
 import {
@@ -14,7 +14,7 @@ import app from "../../Firebase/Firebase.config";
 const Login = () => {
   const auth = getAuth(app);
   const { loginUser } = useContext(AuthContext);
-
+  const [user, setUser] = useState('');
   // email login
   const handleLogin = (e) => {
     e.preventDefault();
@@ -32,7 +32,9 @@ const Login = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
-        console.log(result.user);
+        const googleUser = result.user;
+        setUser(googleUser)
+
       })
       .catch((error) => {
         console.error(error.message);
@@ -44,6 +46,8 @@ const Login = () => {
     const provider = new FacebookAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
+        const fbUser = result.user;
+        setUser(fbUser)
         console.log(result.user);
       })
       .catch((error) => {
@@ -118,6 +122,7 @@ const Login = () => {
                 </button>
               </div>
             </div>
+            <h1>{user.displayName}</h1>
           </form>
         </div>
       </div>

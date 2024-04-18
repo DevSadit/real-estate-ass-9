@@ -7,6 +7,7 @@ import ErrorElement from "../ErrorElement/ErrorElement";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import Login from "../Pages/Login/Login";
 import Resgister from "../Pages/Register/Resgister";
+import CardDetails from "../Pages/Destination/CardDetails";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-
         loader: () => fetch(`/estates.json`),
       },
       {
@@ -39,6 +39,12 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Resgister></Resgister>,
+      },
+      {
+        path: "/carddetails/:id",
+        element: <CardDetails></CardDetails>,
+        loader: () => fetch(`/estates.json`),
+        errorElement: <ErrorElement></ErrorElement>,
       },
     ],
   },

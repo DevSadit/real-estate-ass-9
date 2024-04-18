@@ -4,6 +4,7 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+console.log("khela hbe", import.meta.env.VITE_pass);
 const firebaseConfig = {
   apiKey: "AIzaSyDCDfm_S43CksCbfX0_eNj5bwrA7BPXuSg",
   authDomain: "hotel-project-613bc.firebaseapp.com",

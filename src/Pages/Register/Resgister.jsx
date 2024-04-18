@@ -4,16 +4,20 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { getAuth, updateProfile } from "firebase/auth";
+import app from "../../Firebase/Firebase.config";
 
 const Resgister = () => {
+  const auth = getAuth(app)
   const { creatUser } = useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
 
-
     const passwordPattern = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
     const password = e.target.password.value;
     const email = e.target.email.value;
+    const name = e.target.name.value;
+    const imgUrl = e.target.imgUrl.value;
     if (!passwordPattern.test(password)) {
       toast.warn(`Write The Password Correctly`);
       console.log(
@@ -23,14 +27,14 @@ const Resgister = () => {
       toast.success(`Registered succesfully!`);
       console.log("Password is valid.");
       creatUser(email, password)
-        .then((result) => result)
+        .then((result) => {
+          updateProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: imgUrl,
+          });
+        })
         .catch((error) => console.log(error));
-
-
-
     }
-
-
 
     //
   };
@@ -55,6 +59,7 @@ const Resgister = () => {
                 </label>
                 <input
                   type="name"
+                  name="name"
                   placeholder="Your Name"
                   className="input input-bordered"
                 />
@@ -64,7 +69,8 @@ const Resgister = () => {
                   <span className="label-text">Image URL</span>
                 </label>
                 <input
-                  type="url"
+                  name="imgUrl"
+                  type="text"
                   placeholder="Image url"
                   className="input input-bordered"
                 />

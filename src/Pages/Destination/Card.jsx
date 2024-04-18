@@ -1,9 +1,11 @@
 import { CiStar } from "react-icons/ci";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 const Card = ({ data }) => {
+  console.log(data.id);
   const {
     id,
-    rating, 
+    rating,
     title,
     segment_name,
     description,
@@ -30,8 +32,10 @@ const Card = ({ data }) => {
             </h4>
           ))}
         </div>
-        <h2 className="card-title text-2xl font-bold">{segment_name}</h2>
-        <p className="md:h-24 h-20">{description}</p>
+        <h1 className="text-2xl font-bold">{title}</h1>
+        <hr className="border-dashed h-[1px] bg-[#13131326]" />
+        <p className=" h-20">{description}</p>
+        <h2 className="card-title text-xl font-bold">{segment_name}</h2>
         <hr className="border-dashed h-[1px] bg-[#13131326] my-3" />
         <div className="flex gap-x-3 justify-between">
           <p className="font-medium text-[#41B06E] bg-none border border-[#41B06E] hover:bg-[#92f19d] rounded-full px-8 py-2">
@@ -43,15 +47,16 @@ const Card = ({ data }) => {
           </div>
         </div>
         <div>
-          <button className="text-white hover:bg-[#286d44] w-full font-bold text-xl text-center rounded-lg bg-[#41B06E] py-3">
-            See Details
-          </button>
+          <Link to={`/carddetails/${id}`}>
+            <button className="text-white hover:bg-[#286d44] w-full font-bold text-xl text-center rounded-lg bg-[#41B06E] py-3">
+              See Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>
   );
 };
-
 
 Card.propTypes = {
   data: PropTypes.object,
